@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+            .box{
+                height:100px;
+                width:100px;
+                display: inline-block;
+                border:1px solid black;
+                padding: 20px;
+                margin: 0px;
+            }
+            #getEle{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">hi to drag and drop</div>
+        <div id="2"></div>
+        <div id="parent1" class="box" ondrop="dDrop()" ondragover="nDrop()">1<div id="getEle" ondragstart="dStart()" draggable="true">Drag me please!</div></div>
+        <div id="parent2" class="box" ondrop="dDrop()" ondragover="nDrop()">2</div>
+    </body>
+    <script src="window3_dragAndDrop_appendChild.js"></script>
+</html>

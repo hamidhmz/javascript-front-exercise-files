@@ -1,0 +1,43 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id="output">hi</h1>
+        <h1 id="141"></h1>
+        <br>
+        <input type="button" onclick="print()" value="print that!"><br>
+        <input type="button" onclick="startInt()" value="alert with timmer">
+        <input type="button" onclick="clearInt()" value="stop"><br>
+        <input type="text" id="url" name="url" value="https://google.com">
+        <input type="button" onclick="goUrl()" value="GO to a URL"><br>
+        <form action="" name="myForm">
+            <input type="text" id="url" name="url" value="https://google.com">
+            <input type="button" onclick="goUrl()" value="Goto url"><br>
+            <input type="button" onclick="myFun(this)" value="click1"><br>
+            <input type="button" id="1" value="click2"><br>
+        </form>
+        <br>
+        <div id="wrapper"></div>
+        <img src="https://via.placeholder.com/300x302" alt="placeholder" id="img" onmouseover="cImg(this)" onmouseout="bImg(this)" >
+        <div id="upform"></div><br>
+        <div id="upform2"></div><br>
+        <form id="form2">
+            First Name: <input type="text" id="e1" onkeypress="printFirstName()" value="laurence"><br>
+            Last Name:  <input type="text" id="e2" onchange="printLastName()" value="svekis"><br>
+            <input type="button" onclick="sendInfo()" value="Submit">
+        </form>
+
+        <br><br>
+        <form >
+            <select onchange="imgU()" id="select1">
+                <option value="">Select</option>
+                <option value="150x150">Small</option>
+                <option value="350x150">Medium</option>
+                <option value="750x150">large</option>
+            </select>
+        </form>
+        <img src="https://via.placeholder.com/350x150" id="myImage">
+    </body>
+    <script src="window_onclick_onmouseover_onmouseout_onpresskey.js"></script>
+</html>

@@ -1,0 +1,93 @@
+<html>
+
+    <head>
+        <title>Complete JavaScript Course</title>
+        <style>
+            #game{
+                width: 150px;
+                height: 150px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="message">Complete JavaScript Course</div>
+        <div id="game"></div>
+        <button id="submit" >Start The Game</button>
+        <div id="buttons" style="display:none">
+            <button id="yellow" onclick="pushToAnswer()">Yellow</button>
+            <button id="red" onclick="pushToAnswer()">Red</button>
+            <button id="blue" onclick="pushToAnswer()">Blue</button>
+            <button id="green" onclick="pushToAnswer()">Green</button>
+        </div>
+        <div id="result"></div>
+        
+        
+        <script>
+            //225
+            var d = [];
+            var a = ['red','yellow','blue','green'];
+            var b = Math.floor(Math.random()*a.length);
+            var c = 0;
+            var interval;
+            var answer = [];
+            document.querySelector('#submit').onclick = run;
+            function run(){
+                document.querySelector('#result').innerHTML = '';
+                document.querySelector('#submit').setAttribute('style','display:none');
+                clearInterval(game);
+                interval = setInterval(game,1000);
+            }
+            function game(){
+                if(c != 4){
+                    while(d.includes(a[b])){
+                        b = Math.floor(Math.random()*a.length);
+                        console.log(b);
+                    }
+                    d.push(a[b]);
+                }
+                document.querySelector('#game').setAttribute('style','background-color:'+a[b]);
+                
+                c ++;
+                if(c == 5){
+                    clearInterval(interval);
+                    document.querySelector('#game').setAttribute('style','display:none');
+                    document.querySelector('#buttons').setAttribute('style','display:unset');
+                }
+            }
+            function pushToAnswer(){
+                answer.push(event.target.id);
+                if(answer.length == 4){
+                    document.querySelector('#buttons').setAttribute('style','display:none');
+                    if(arraysEqual(answer, d)){
+                        document.querySelector('#result').innerHTML = 'YOU WIN!!!<br>';
+                        d = [];
+                        b = 0;
+                        c = 0;
+                        answer = [];
+                        document.querySelector('#submit').setAttribute('style','display:unset');
+                    }else{
+                        document.querySelector('#result').innerHTML = 'YOU LOST!!<br>';
+                        d = [];
+                        b = 0;
+                        c = 0;
+                        answer = [];
+                        document.querySelector('#submit').setAttribute('style','display:unset');
+                    }
+                }
+            }
+            function arraysEqual(arr1, arr2) {
+                if(arr1.length !== arr2.length)
+                    return false;
+                for(var i = arr1.length; i--;) {
+                    if(arr1[i] !== arr2[i])
+                        return false;
+                }
+                return true;
+            }
+            
+        </script>
+    </body>
+    
+    </html>

@@ -1,0 +1,30 @@
+<html>
+
+    <head>
+        <title>Complete JavaScript Course</title>
+        <style>
+            .error{
+                border-color: red;
+            }
+            .emailDiv{
+                color: red;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <form action="somewhere.html" >
+            User Name: <input type="text" name="uname" id="uname">
+            <div id="unameV"></div>
+            Last Name: <input type="text" name="lname" id="lname">
+            <div id="lnameV"></div>
+            Email    : <input type="text" name="email" id="email">
+            <div id="emailV"></div>
+            <input type="button" value="Click Me" onclick="validation()">
+        </form>
+        
+        
+        <script src="regexValidation.js"></script>
+    </body>
+    
+</html>

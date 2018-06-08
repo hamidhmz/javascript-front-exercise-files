@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="wrapper">Complete JavaScript Course</div>
+    <form>
+        <select onchange="imgU()">
+            <option value="">Select</option>
+            <option value="150x150">Small</option>
+            <option value="350x150">Medium</option>
+            <option value="750x150">Large</option>
+        </select>
+        <br> Add Text
+        <input type="text" onchange="imgU()">
+        <br> Select Color
+        <input type="color" onchange="imgU()">
+        <br> <img src="http://via.placeholder.com/350x150/222/fff?text=Image1" id="myImage"> 
+    </form>
+
+
+
+
+    <br><br><br>
+
+    event.key:<span id="key"></span><br>
+    <input type="text" id="mystring" onkeypress="printKey()">
+
+    <br><br><br>
+
+    you can just type number <br>
+    is a number? <span id="check2"></span><br>
+    <input type="text" id="typenumber" onkeypress="return numCheck()">
+    <!-- if onkeypress would be true you can type in to it if it is false you cant -->
+
+
+    <br><br><br>
+
+    you can't past to it <br>
+    <input type="text" id="" onpaste="return false">
+
+    <br><br><br>
+
+    
+    <form onsubmit="return valForm()" action="index.html" method="get" >
+        <div id="firstNameValidateMessage"></div>
+        first name:<input type="text" id="firstName" name="firstName"><br>
+        <div id="lastNameValidateMessage"></div>
+        last name:<input type="text" id="lastName" name="lastName"><br>
+        <div id="ageValidateMessage"></div>
+        age:<input type="text" id="age" name="age"><br>
+        <input type="submit" value="submit">
+    </form>
+    <script src="window2_event_target_children_parentElement_replace.js"></script>
+</body>
